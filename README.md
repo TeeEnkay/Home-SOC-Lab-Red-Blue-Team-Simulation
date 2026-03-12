@@ -8,13 +8,13 @@ A virtualized red team / blue team lab using Kali Linux (attacker) and a Windows
 
 This project demonstrates a home cybersecurity lab where I simulated real-world attacks using Kali Linux and detected the activity using Splunk SIEM and Sysmon logs.
 
-## 🌐 Network Diagram
-
-![SOC Lab Network Diagram](screenshots/network_diagram.png)
-
 ---
 
 ## 🧱 Lab Architecture
+
+The lab environment consists of a Kali Linux attacker machine and a Windows VM running Splunk and Sysmon for monitoring, connected through an isolated VirtualBox internal network.
+
+![SOC Lab Architecture](screenshots/network.png)
 
 ---
 
@@ -34,7 +34,9 @@ This project demonstrates a home cybersecurity lab where I simulated real-world 
 ### 1. Reconnaissance
 ```bash
 nmap -A 192.168.0.153 -Pn
+
 ```
+![image3](3.png)
 
 ### 2. Payload Generation (MSFVenom)
 ```bash
