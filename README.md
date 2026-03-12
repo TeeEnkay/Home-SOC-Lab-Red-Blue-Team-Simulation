@@ -36,7 +36,7 @@ The lab environment consists of a Kali Linux attacker machine and a Windows VM r
 nmap -A 192.168.0.153 -Pn
 
 ```
-![image3](3.png)
+![Recon](Recon.png)
 
 ### 2. Payload Generation (MSFVenom)
 ```bash
