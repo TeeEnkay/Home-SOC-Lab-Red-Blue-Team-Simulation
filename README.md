@@ -83,7 +83,7 @@ index="endpoint" test2.pdf.exe
 
 ---
 
-## 🛠️ Tools
+## 🛠️ Tools Used
 
 `Kali Linux` · `Metasploit / MSFVenom` · `Nmap` · `Python HTTP Server` · `Splunk Enterprise` · `Sysmon` · `VirtualBox`
 
