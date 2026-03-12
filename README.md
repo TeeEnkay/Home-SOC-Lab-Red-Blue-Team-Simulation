@@ -4,6 +4,18 @@ A virtualized red team / blue team lab using Kali Linux (attacker) and a Windows
 
 A virtualized red team / blue team lab using Kali Linux (attacker) and a Windows VM running Splunk (defender) on an isolated VirtualBox internal network.
 
+# 🔐 Home SOC Lab – Red & Blue Team Simulation
+
+This project demonstrates a home cybersecurity lab where I simulated real-world attacks using Kali Linux and detected the activity using Splunk SIEM and Sysmon logs.
+
+## 🌐 Network Diagram
+
+![SOC Lab Network Diagram](screenshots/network_diagram.png)
+
+---
+
+## 🧱 Lab Architecture
+
 ---
 
 ## 🧱 Lab Setup
