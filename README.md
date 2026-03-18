@@ -1,18 +1,26 @@
-# Home-SOC-Lab-Red-Blue-Team-Simulation
-A virtualized red team / blue team lab using Kali Linux (attacker) and a Windows VM running Splunk (defender) on an isolated VirtualBox internal network.
-# 🔐 Home Penetration Testing Lab
-
-A virtualized red team / blue team lab using Kali Linux (attacker) and a Windows VM running Splunk (defender) on an isolated VirtualBox internal network.
 
 # 🔐 Home SOC Lab – Red & Blue Team Simulation
 
-This project demonstrates a home cybersecurity lab where I simulated real-world attacks using Kali Linux and detected the activity using Splunk SIEM and Sysmon logs.
+A hands-on home SOC lab simulating real-world cyber attacks using Kali Linux and detecting them with Splunk SIEM and Sysmon in an isolated virtual environment. This project demonstrates both red team (offensive) and blue team (defensive) operations, including attack execution, log analysis, and incident response.
 
+---
+
+## 🛠️ Tools Used
+
+- **Kali Linux** – Attacking machine for simulations  
+- **Metasploit / MSFVenom** – Exploitation & payload generation  
+- **Nmap** – Network scanning and reconnaissance  
+- **Python HTTP Server** – Payload delivery  
+- **Windows 10** – Target system  
+- **Sysmon** – Advanced endpoint logging  
+- **Splunk Enterprise** – SIEM for log analysis and detection  
+- **VirtualBox** – Virtualized lab environment
+  
 ---
 
 ## 🧱 Lab Architecture
 
-The lab environment consists of a Kali Linux attacker machine and a Windows VM running Splunk and Sysmon for monitoring, connected through an isolated VirtualBox internal network.
+This lab environment consists of a Kali Linux attacker machine and a Windows VM running Splunk and Sysmon for monitoring, connected through an isolated VirtualBox internal network.
 
 ![SOC Lab Architecture](screenshots/network.png)
 
@@ -83,10 +91,23 @@ index="endpoint" test2.pdf.exe
 
 ---
 
-## 🛠️ Tools Used
+## 🧠 Skills Demonstrated
 
-`Kali Linux` · `Metasploit / MSFVenom` · `Nmap` · `Python HTTP Server` · `Splunk Enterprise` · `Sysmon` · `VirtualBox`
+- SIEM monitoring & log analysis (Splunk)  
+- Endpoint logging & detection (Sysmon)  
+- Threat detection & basic incident response  
+- Network reconnaissance (Nmap)  
+- Exploitation & payload delivery (Metasploit, MSFVenom)  
+- Log correlation & investigation  
+- Virtual lab setup (VirtualBox)
 
 ---
+
+## Lessons Learned
+
+- Importance of log visibility using Sysmon
+- Challenges in detecting attacks vs normal activity
+- How attackers disguise payloads using file extensions
+- Value of SIEM tools in real-time monitoring
 
 > ⚠️ **Disclaimer:** For educational purposes only in an isolated lab environment.
