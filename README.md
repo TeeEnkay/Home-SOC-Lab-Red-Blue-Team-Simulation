@@ -1,7 +1,7 @@
 
 # 🔐 Home SOC Lab – Red & Blue Team Simulation
 
-A hands-on home SOC lab simulating real-world cyber attacks using Kali Linux and detecting them with Splunk SIEM and Sysmon in an isolated virtual environment. This project demonstrates both red team (offensive) and blue team (defensive) operations, including attack execution, log analysis, and incident response.
+I created a  hands-on home SOC lab simulating real-world cyber attacks using Kali Linux and detecting them with Splunk SIEM and Sysmon in an isolated virtual environment. This project demonstrates both red team (offensive) and blue team (defensive) operations, including attack execution, log analysis, and incident response.
 
 ---
 
@@ -88,6 +88,18 @@ index="endpoint" test2.pdf.exe
 ```
 ---
 
+## 🧠 Detection Logic Explained
+
+This lab focuses on detecting malicious activity through:
+
+- Process creation anomalies (Sysmon Event ID 1)  
+- Suspicious file naming patterns  
+- Reverse shell network connections  
+
+The detection approach simulates how a SOC analyst identifies threats by correlating multiple log sources.
+
+---
+
 ## 🔬 Investigation Walkthrough
 
 ### Step 1: Initial Query & App Installation
@@ -118,7 +130,7 @@ index="endpoint" test2.pdf.exe
 
 ### Step 3: Event Code Analysis
 
-Analyzed the **EventCode** field to understand what types of Sysmon events were triggered:
+Focused analysis was performed on **Sysmon EventCode 1 (Process Creation)** to identify how the malicious executable was launched.
 
 <img src="screenshots/22.png" alt="splunktest" width="500"/>
 
@@ -135,7 +147,7 @@ Analyzed the **EventCode** field to understand what types of Sysmon events were 
 
 ### Step 4: Process GUID Correlation
 
-Extracted the **process_guid** field to correlate events and build the attack chain:
+Following the analysis of **EventCode 1 (Process Creation)**, the `process_guid` field was extracted to correlate related events and trace execution flow.
 
 <img src="screenshots/23.png" alt="splunktest" width="500"/>
 
